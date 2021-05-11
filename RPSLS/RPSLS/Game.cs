@@ -22,8 +22,17 @@ namespace RPSLS
         {
             userInterface.StartMessage(this.name);
             userInterface.Rules();
+        }
 
-
+        public void SelectMode()
+        {
+            string userInput = userInterface.ModeSelection();
+            if (userInput != modeOptions[0] || userInput != modeOptions[1])
+            {
+                userInterface.ValidationStatement();
+                userInput = userInterface.ModeSelection();
+            }
+            this.modeSelected = userInput;
         }
     }
 }
