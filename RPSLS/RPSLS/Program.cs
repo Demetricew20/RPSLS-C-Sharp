@@ -6,13 +6,16 @@ namespace RPSLS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Game rpsls = new Game();
+            rpsls.WelcomeMessage();
             Human playerOne = new Human("John");
+            Human playerTwo = new Human("Jane");
             CPU cpuPlayer = new CPU("CPU");
             PlayersList playerList = new PlayersList();
             playerList.AddPlayer(playerOne);
+            playerList.AddPlayer(playerTwo);
             playerList.AddPlayer(cpuPlayer);
-            playerList.listCount();
+            playerList.ListCount();
         }
     }
 }

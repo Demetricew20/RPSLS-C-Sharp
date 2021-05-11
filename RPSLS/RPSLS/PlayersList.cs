@@ -19,7 +19,7 @@ namespace RPSLS
             players.Add(player);
         }
 
-        public void listCount()
+        public void ListCount()
         {
             Console.WriteLine(players.Count);
         }
